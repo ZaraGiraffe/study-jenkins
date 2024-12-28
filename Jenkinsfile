@@ -6,8 +6,10 @@ pipeline {
     stages {
         stage('Install apache2') {
             steps {
-                echo "Install apache2"
-                echo $PASSWORD
+                script {
+                    echo "Install apache2"
+                    echo $PASSWORD
+                }
             }
         }
     }
