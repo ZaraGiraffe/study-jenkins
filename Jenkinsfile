@@ -1,10 +1,13 @@
 pipeline {
     agent any
-
+    environment {
+        PASSWORD = credentials("osboxes_password")
+    }
     stages {
-        stage('Hello') {
+        stage('Install apache2') {
             steps {
-                echo 'Hello World'
+                echo "Install apache2"
+                echo $PASSWORD
             }
         }
     }
