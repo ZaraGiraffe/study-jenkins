@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Install apache2') {
             steps {
-                sh 'echo $PASSWORD | sudo apt install apache2'
+                sh 'echo $PASSWORD | sudo -S apt install -y apache2'
             }
         }
     }
