@@ -10,7 +10,9 @@ pipeline {
             }
         }
         stage('Get errors') {
-            sh 'grep \'HTTP/1.1" [45][0-9][0-9] \' /var/log/apache2/access.log'
+            steps {
+                sh 'grep \'HTTP/1.1" [45][0-9][0-9] \' /var/log/apache2/access.log'
+            }
         }
     }
 }
