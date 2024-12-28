@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { label 'osboxes' }
     environment {
         PASSWORD = credentials("osboxes_password")
     }
